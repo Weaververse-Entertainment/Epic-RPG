@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/art/ui/title/logo.png" type="Texture" id=1]
+[ext_resource path="res://assets/art/ui/title/newgame.png" type="Texture" id=2]
+[ext_resource path="res://assets/art/ui/title/loadgame.png" type="Texture" id=3]
+[ext_resource path="res://assets/art/ui/title/quit.png" type="Texture" id=4]
+[ext_resource path="res://assets/art/ui/title/options.png" type="Texture" id=5]
+
+[node name="MainMenu" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 120
+custom_constants/margin_top = 80
+custom_constants/margin_left = 120
+custom_constants/margin_bottom = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 80.0
+margin_right = 1800.0
+margin_bottom = 1000.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 202.0
+margin_right = 1478.0
+margin_bottom = 920.0
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+margin_right = 1276.0
+margin_bottom = 283.0
+texture = ExtResource( 1 )
+stretch_mode = 4
+
+[node name="MenuItems" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 287.0
+margin_right = 1276.0
+margin_bottom = 920.0
+size_flags_vertical = 3
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NewGame" type="TextureRect" parent="HBoxContainer/VBoxContainer/MenuItems"]
+margin_top = 68.0
+margin_right = 1276.0
+margin_bottom = 169.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGame" type="TextureRect" parent="HBoxContainer/VBoxContainer/MenuItems"]
+margin_top = 173.0
+margin_right = 1276.0
+margin_bottom = 280.0
+texture = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="Options" type="TextureRect" parent="HBoxContainer/VBoxContainer/MenuItems"]
+margin_top = 284.0
+margin_right = 1276.0
+margin_bottom = 426.0
+texture = ExtResource( 5 )
+stretch_mode = 4
+
+[node name="Quit" type="TextureRect" parent="HBoxContainer/VBoxContainer/MenuItems"]
+margin_top = 430.0
+margin_right = 1276.0
+margin_bottom = 565.0
+texture = ExtResource( 4 )
+stretch_mode = 4
